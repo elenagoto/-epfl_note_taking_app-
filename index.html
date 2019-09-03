@@ -8,14 +8,17 @@
 <body>
   <!-- Start Header -->
   <header class="header">
-    <h1 class="header__title">My Notes</h1>
-    <h2>Welcome Stranger</h2>
+    <h1 class="header__title"> <a href="/">My Notes</a></h1>
+    {$$ WELCOME $$}
+    <!-- <h2 id="welcomeMessage">Welcome <span id="userName"></span></h2> -->
   </header>
 
   <!-- Start Main -->
   <main class="main">
 
     <!-- Form Create note -->
+    <!-- <p> Your note has been saved</p> -->
+    {$$ SUBMITED $$}
     <form class="form" action="/submit" method="POST">
       <textarea class="form__text" id="createNote" name="new_note" cols="30" rows="10" placeholder="Add your note's text here..."></textarea>
       <input class="form__button" id="createButon" type="submit" value="Create note">
@@ -25,7 +28,6 @@
     <form class="form" action="/search" method="GET">
       <input class="form__input" id="searchNote" type="text" name="q" placeholder="Search...">
       <input class="form__button" id="searchButton" type="submit" value="Search">
-      {$$ SUBMITED $$}
     </form>
 
     <!-- See all notes -->

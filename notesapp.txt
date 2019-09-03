@@ -1,5 +1,18 @@
-19/September/03***Et voilà, moi de nouveau, mais cette fois je fais une plus long texte---19/September/03***Je veux essayer de nouveau. 
-But this time I'll add a newline. And some more text.---19/September/03***Add another note---19/September/03***And this is the last note I'm adding---19/September/03***Let's try again---19/September/03***And I'm trying to add as many notes as possible. 
-But I'm not sure the newline works---19/September/03***Y si intento de nuevo, quizas la nueve linea functiona.
-vamos a ver.
-Sería fantástico!---
+04/July/19***This is my first note.
+- I think I have to do more things
+- And try to be more careful
+---18/July/19***This is my second note, I'm sure this will get better with time.
+Now I think some color would be great for this page.
+---01/September/19***And a third note. Not sure of what I want to add, but I think I need more notes to be sure I have everything
+---02/September/19***Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quaerat quasi ea rem assumenda est vel consectetur placeat ratione omnis quisquam veniam quidem maiores nihil fuga itaque, vitae explicabo minus?
+---03/September/19***Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aliquid eum vero repudiandae voluptates excepturi voluptate, ut illo provident laboriosam a, obcaecati iure explicabo est iusto. Tempore quae dolorum perspiciatis.
+---03/September/19***Let's add a new note, so I can test my new settings
+---03/September/19***And now, I can add a new note
+---03/September/19***This is my To do list:
+- Finish the back-end for the app.
+- Start the JavaScript program.
+- Style the app with some CSS.
+- Make dinner
+---03/September/19***Ahora vamos a ver si funciona mi nuevo código
+---03/September/19***And I'll add a new note to try my code again
+---
