@@ -18,20 +18,22 @@
   <main class="main">
     
     <!-- Form Search note -->
-    <form class="form" action="/" method="GET">
-      <input class="form__input" id="searchNote" type="text" name="search_field" placeholder="Search...">
+    <form class="form" action="/search" method="GET">
+      <input class="form__input" id="searchNote" type="text" name="q" placeholder="Search...">
       <input class="form__button" id="searchButton" type="submit" value="Search">
     </form>
 
     <!-- See all notes -->
     <div class="notes__link">
-      <a href="/search">See all notes</a>
+      <a href="/notes">See all notes</a>
     </div>
     <div class="notes_container">
-      <div class="note">
+      <h3>My notes:</h3>
+      <!-- <div class="note">
         <p class="note__date">06/dec/19</p>
-        <p class="note__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nulla porro optio temporibus, ullam incidunt excepturi minima eum molestias, deleniti enim alias vel expedita maiores, repellat quo nostrum nisi. Consequuntur?</p>
-      </div>
+        <p class="note__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nulla porro optio temporibus, ullam incidunt excepturi minima eum molestias, deleniti enim alias vel expedita maiores, repellat quo nostrum nisi. Consequuntur?</p>
+      </div> -->
+      {$$ NOTES $$}
     </div>
 
   </main>
