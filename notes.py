@@ -17,7 +17,6 @@ def create_note(note):
     notes.write("---")
     notes.close()
 
-
 # = Search & get notes =
 def search_note(text):
     document = open("notesapp.txt")
@@ -48,8 +47,8 @@ def search_note(text):
             note_text = note_array[1].replace("\n", "<br>")#Keeping newlines in notes
             note_text = "<p class=\"note__text\">" + note_text + "</p>"
             
-        # create note div with latest note created appearing first in the list
-        full_text = "<div class=\"note\">" + note_date + note_text + "</div>" + full_text
+             # create note div with latest note created appearing first in the list
+            full_text = "<div class=\"note\">" + note_date + note_text + "</div>" + full_text
         
     if full_text == "":
         full_text = "<h3>Notes Found: " + str(notes_count) + \
