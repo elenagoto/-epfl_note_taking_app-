@@ -80,9 +80,10 @@ body {
 }
 
 .form__text {
-  border: solid 5px #00dfbf;
+  border: solid 5px #00c8ac;
   border-radius: 5px;
   height: 30vh;
+  line-height: 1.8;
   margin-bottom: 1rem;
   padding: 3%;
   resize: none;
@@ -92,17 +93,18 @@ body {
   font-size: 2rem;
 }
 .form__input {
-  border: solid 1px #00dfbf;
+  border: solid 1px #00c8ac;
   border-radius: 5px;
   padding: 2%;
   margin-bottom: 1rem;
 }
 .form__button {
   align-self: flex-end;
-  background-color: #00dfbf;
+  background-color: #00c8ac;
   border: none;
   border-radius: 5px;
   color: white;
+  font-weight: 500;
   padding: 2%;
   width: 40%;
 }
@@ -114,10 +116,11 @@ body {
 }
 
 .notes__link a{
-  background-color: #00dfbf;
+  background-color: #00c8ac;
   border: none;
   border-radius: 5px;
   color: white;
+  font-weight: 500;
   padding: 3%;
   text-align: center;
   text-decoration: none;
@@ -142,10 +145,11 @@ body {
 }
 
 .note {
-  border:solid 1px #00dfbf;
+  border:solid 1px #00c8ac;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  line-height: 1.8;
   margin: 1% 0;
   padding: 1%;
 }
@@ -155,7 +159,6 @@ body {
   background-color: #f0f0f0;
   border-radius: 5px;
   color:#00c8ac;
-  line-height: 1.5;
   margin-bottom: 1%;
   padding: 1%;
 }

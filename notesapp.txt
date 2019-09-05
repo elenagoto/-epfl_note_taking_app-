@@ -19,4 +19,10 @@ Now I think some color would be great for this page.
 ---05/September/19***And yet another new note to test the whole
 ---05/September/19***Last note!
 ---05/September/19***Let's see that message of note created
+---05/September/19***New note to try the numbers! This time let's use other words to try the search as well.
+- And let's test all the other elements
+- Like adding extra lines
+- Like to do lists
+---05/September/19***And now I'm trying the line height I just added.
+Maybe it will look better
 ---

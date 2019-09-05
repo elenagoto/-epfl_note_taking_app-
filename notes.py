@@ -28,10 +28,12 @@ def search_note(text):
 
     # variables to get the text
     full_text = ""
+    notes_count = 0
 
     # loop the notes content
     for note in notes:
         if note.lower().find(text) != -1:
+            notes_count += 1
             # Make list with single note to separate date and text
             note_array = note.split("***")
 
@@ -46,11 +48,15 @@ def search_note(text):
             note_text = note_array[1].replace("\n", "<br>")#Keeping newlines in notes
             note_text = "<p class=\"note__text\">" + note_text + "</p>"
             
-            # create note div with latest note created appearing first in the list
-            full_text = "<div class=\"note\">" + note_date + note_text + "</div>" + full_text
+        # create note div with latest note created appearing first in the list
+        full_text = "<div class=\"note\">" + note_date + note_text + "</div>" + full_text
         
     if full_text == "":
-        full_text = "<div class=\"note\"> <p class=\"note__text\">Sorry! there are no results that match your search.</p> </div>"
+        full_text = "<h3>Notes Found: " + str(notes_count) + \
+            "</h3> <div class=\"note\"> <p class=\"note__text\">Sorry! there are no results that match your search.</p> </div>"
+    else:
+        full_text = "<h3>Notes Found: " + str(notes_count) + "</h3 >" + full_text
+
     return full_text
 
 # = Get HTML page =
