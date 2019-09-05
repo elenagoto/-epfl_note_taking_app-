@@ -18,4 +18,5 @@ Now I think some color would be great for this page.
 ---05/September/19***This is a new note to test the "Today" element on the date
 ---05/September/19***And yet another new note to test the whole
 ---05/September/19***Last note!
+---05/September/19***Let's see that message of note created
 ---
