@@ -5,43 +5,59 @@
   <meta charset="UTF-8">
   <title>My Notes App</title>
   <link rel="stylesheet" href="static/style.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway:300,400,500,700&display=swap" rel="stylesheet"> -->
 </head>
 
 <body>
   <!-- Start Header -->
   <header class="header">
-    <h1 class="header__title"> <a href="/">My Notes</a></h1>
+    <h1 class="header__title"> <a href="/"> <img src="static/images/pencil.png" alt="green pencil"> My Notes</a></h1>
+    
   </header>
 
   <!-- Start Main -->
   <main class="main">
-    
-    <!-- Form Search note -->
-    <form class="form" action="/search" method="GET">
-      <input class="form__input" id="searchNote" type="text" name="q" placeholder="Search...">
-      <input class="form__button" id="searchButton" type="submit" value="Search">
-    </form>
+    <div class="main__content">
 
-    <!-- See all notes -->
-    <div class="notes__link">
-      <a href="/notes">See all notes</a>
-    </div>
-    <div class="notes_container">
-      <h3>My notes:</h3>
-      <!-- <div class="note">
-        <p class="note__date">Created <span>06/dec/19<span></p>
-        <p class="note__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nulla porro optio temporibus, ullam incidunt excepturi minima eum molestias, deleniti enim alias vel expedita maiores, repellat quo nostrum nisi. Consequuntur?</p>
-      </div> -->
-      {$$ NOTES $$}
-    </div>
+      <!-- Form Search note -->
+      <form class="form" action="/search" method="GET">
+        <input class="form__input" id="searchNote" type="text" name="q" placeholder="Search...">
+        <input class="form__button" id="searchButton" type="submit" value="Search">
+      </form>
+  
+      <!-- See all notes -->
+      <div class="form notes__link">
+        <a href="/notes">See all notes</a>
+      </div>
 
+      <!-- Notes Container -->
+      <div class="notes__container">
+        <h3>Notes:</h3>
+        {$$ NOTES $$}
+        <!-- <div class="note">
+          <p class="note__date">Created: <span>06/dec/19<span></p>
+          <p class="note__text">FALSE - Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nulla porro optio temporibus, ullam incidunt excepturi minima eum molestias, deleniti enim alias vel expedita maiores, repellat quo nostrum nisi. Consequuntur?</p>
+        </div> -->
+        
+      </div>
+    </div>
+    <!-- Start image -->  
+    <div class="image_container">
+      <img src="static/images/girl-notepad.png" alt="girl with notepad and gigant pencil and cup of coffee">
+    </div>
   </main>
+
   <!-- Start Footer -->
   <footer class="footer">
+    <div class="footer__element">
+      <p>&copy; <a href="https://elenagoto.ch" target="_blank">Laura Gómez</a> 2019</p>
+    </div>
+    <div class="footer__element">
+      <p> Images designed by <a href="http://www.freepik.com">slidesgo / Freepik</a></p>
+    </div>
   </footer>
 
-  <!-- Script -->
-  <script src="static/script.js"></script>
+
 </body>
 
 </html>

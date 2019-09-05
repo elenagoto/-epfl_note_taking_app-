@@ -4,39 +4,56 @@
   <meta charset="UTF-8">
   <title>My Notes App</title>
   <link rel="stylesheet" href="static/style.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway:300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css"> -->
 </head>
 <body>
   <!-- Start Header -->
   <header class="header">
-    <h1 class="header__title"> <a href="/">My Notes</a></h1>
-    {$$ WELCOME $$}
-    <!-- <h2 id="welcomeMessage">Welcome <span id="userName"></span></h2> -->
+    <h1 class="header__title"> <a href="/"> <img src="static/images/pencil.png" alt="green pencil"> My Notes</a></h1>
+    <!-- {$$ WELCOME $$} -->
+    <h2 class="header__welcome" id="welcomeMessage">Welcome <span id="userName"></span></h2>
   </header>
 
   <!-- Start Main -->
   <main class="main">
+    <div class="main__content">
+      <!-- Form Search note -->
+      <form class="form form--search" action="/search" method="GET">
+        <input class="form__input" id="searchNote" type="text" name="q" placeholder="Search...">
+        <input class="form__button" id="searchButton" type="submit" value="Search">
+      </form>
+  
+     
+      <form class="form form--create" action="/submit" method="POST"> 
+        <!-- Form Create note -->
+        {$$ SUBMITED $$}
+        <!-- <p class="form__saved"> Your note has been saved</p> -->
+        <textarea class="form__text" id="createNote" name="new_note" cols="30" rows="10"
+          placeholder="Add your note's text here..."></textarea>
+        <input class="form__button" id="createButon" type="submit" value="Create note">
+      </form>
+      <!-- See all notes -->
+      <div class="form notes__link">
+        <a href="/notes">See all my notes</a>
+      </div>
+    </div>
 
-    <!-- Form Create note -->
-    <!-- <p> Your note has been saved</p> -->
-    {$$ SUBMITED $$}
-    <form class="form" action="/submit" method="POST">
-      <textarea class="form__text" id="createNote" name="new_note" cols="30" rows="10" placeholder="Add your note's text here..."></textarea>
-      <input class="form__button" id="createButon" type="submit" value="Create note">
-    </form>
-
-    <!-- Form Search note -->
-    <form class="form" action="/search" method="GET">
-      <input class="form__input" id="searchNote" type="text" name="q" placeholder="Search...">
-      <input class="form__button" id="searchButton" type="submit" value="Search">
-    </form>
-
-    <!-- See all notes -->
-    <div class="notes__link">
-      <a href="/notes">See all notes</a>
+    <!-- Start image -->
+    <div class="image_container">
+      <img src="static/images/girl-notepad.png" alt="girl with notepad and gigant pencil and cup of coffee">
     </div>
   </main>
+
+
   <!-- Start Footer -->
   <footer class="footer">
+    <div class="footer__element">
+      <p>&copy; <a href="https://elenagoto.ch" target="_blank">Laura Gómez</a> 2019</p>
+    </div>
+    <div class="footer__element">
+      <p> Images designed by <a href="http://www.freepik.com">slidesgo / Freepik</a></p>
+    </div>
   </footer>
   
   <!-- Script -->

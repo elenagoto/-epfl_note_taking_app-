@@ -1,3 +1,5 @@
+# To run it: FLASK_APP=notes.py flask run
+
 import flask
 import datetime
 
@@ -63,16 +65,16 @@ def get_html(page_name):
 # = Homepage =
 @app.route("/")
 def homepage():
-    return get_html("index").replace("{$$ SUBMITED $$}", "").replace("{$$ WELCOME $$}", '<h2 id="welcomeMessage">Welcome <span id="userName"></span></h2>')
+    return get_html("index").replace("{$$ SUBMITED $$}", "")
 
 # = Create note =
 @app.route("/submit", methods=['GET', 'POST'])
 def addnote():
     note_text = flask.request.form['new_note']
-    html_page = get_html("index").replace("{$$ WELCOME $$}", '')
+    html_page = get_html("index")
     if note_text != "":
         create_note(note_text.strip())
-        return html_page.replace("{$$ SUBMITED $$}", "<p> Your note has been saved</p>")
+        return html_page.replace("{$$ SUBMITED $$}", '<p class="form__saved"> Your note has been saved</p>')
     else:
         return html_page.replace("{$$ SUBMITED $$}", "")
         

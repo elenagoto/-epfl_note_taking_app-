@@ -15,7 +15,6 @@ function name() {
     name = localStorage.getItem('userName')
     welcomeMessage.innerHTML = `Welcome back <span id="userName">${name}</span>` 
   }
-  console.log(name);
 }
 
 name()

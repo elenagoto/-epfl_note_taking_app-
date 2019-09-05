@@ -15,4 +15,7 @@ Now I think some color would be great for this page.
 - Make dinner
 ---03/September/19***Ahora vamos a ver si funciona mi nuevo código
 ---03/September/19***And I'll add a new note to try my code again
+---05/September/19***This is a new note to test the "Today" element on the date
+---05/September/19***And yet another new note to test the whole
+---05/September/19***Last note!
 ---
