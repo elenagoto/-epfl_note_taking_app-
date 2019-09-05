@@ -167,8 +167,9 @@ body {
 }
 
 .image_container img {
+  margin: 3%;
   min-width: 40rem;
-  width: 100%;
+  width: 85%;
 }
 /* ==== FOOTER === */
 
