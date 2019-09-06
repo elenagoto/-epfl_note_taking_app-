@@ -12,32 +12,34 @@
   <!-- Start Header -->
   <header class="header">
     <h1 class="header__title"> <a href="/"> <img src="static/images/pencil.svg" alt="green pencil"> My Notes</a></h1>
-    
   </header>
 
   <!-- Start Main -->
   <main class="main">
-    <div class="main__content">
-
-      <!-- Form Search note -->
-      <form class="form" action="/search" method="GET">
-        <input class="form__input" id="searchNote" type="text" name="q" placeholder="Search...">
-        <input class="form__button" id="searchButton" type="submit" value="Search">
-      </form>
+    <div class="forms">
+      <div class="forms__content">
   
-      <!-- See all notes -->
-      <div class="form notes__link">
-        <a href="/notes">See all my notes</a>
-      </div>
-
-      <!-- Notes Container -->
-      <div class="notes__container">
-        {$$ NOTES $$}
-        <!-- <div class="note">
-          <p class="note__date">Created: <span>06/dec/19<span></p>
-          <p class="note__text">FALSE - Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nulla porro optio temporibus, ullam incidunt excepturi minima eum molestias, deleniti enim alias vel expedita maiores, repellat quo nostrum nisi. Consequuntur?</p>
-        </div> -->
-        
+        <!-- Form Search note -->
+        <form class="form" action="/search" method="GET">
+          <input class="form__input" id="searchNote" type="text" name="q" placeholder="Search...">
+          <input class="form__button" id="searchButton" type="submit" value="Search">
+        </form>
+    
+        <!-- See all notes -->
+        <div class="form notes__link">
+          <a href="/all_notes">See all my notes</a>
+        </div>
+  
+        <!-- Notes Container -->
+        <div class="notes__container">
+          {$$ NOTES $$}
+          <!-- <h3>Notes found: 0</h3>
+          <div class="note">
+            <p class="note__date">Created: <span>06/dec/19<span></p>
+            <p class="note__text">FALSE - Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nulla porro optio temporibus, ullam incidunt excepturi minima eum molestias, deleniti enim alias vel expedita maiores, repellat quo nostrum nisi. Consequuntur?</p>
+          </div> -->
+          
+        </div>
       </div>
     </div>
     <!-- Start image -->  

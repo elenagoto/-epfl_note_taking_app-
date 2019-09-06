@@ -10,31 +10,41 @@
   <!-- Start Header -->
   <header class="header">
     <h1 class="header__title"> <a href="/"> <img src="static/images/pencil.svg" alt="green pencil"> My Notes</a></h1>
-    <!-- {$$ WELCOME $$} -->
-    <h2 class="header__welcome" id="welcomeMessage">Welcome <span id="userName"></span></h2>
+    <h2 class="header__welcome hidden" id="welcomeMessage">Welcome <span id="userBack"></span> <span id="userWelcome"></span></h2>
   </header>
 
   <!-- Start Main -->
   <main class="main">
-    <div class="main__content">
-      <!-- Form Search note -->
-      <form class="form form--search" action="/search" method="GET">
-        <input class="form__input" id="searchNote" type="text" name="q" placeholder="Search...">
-        <input class="form__button" id="searchButton" type="submit" value="Search">
-      </form>
-  
-     
-      <form class="form form--create" action="/submit" method="POST"> 
-        <!-- Form Create note -->
-        {$$ SUBMITED $$}
-        <!-- <p class="form__saved"> Your note has been saved</p> -->
-        <textarea class="form__text" id="createNote" name="new_note" cols="30" rows="10"
-          placeholder="Add your note's text here..."></textarea>
-        <input class="form__button" id="createButon" type="submit" value="Create note">
-      </form>
-      <!-- See all notes -->
-      <div class="form notes__link">
-        <a href="/notes">See all my notes</a>
+    <div class="login" id="loginForm">
+      <div class="login__content">
+        <h2 class="login__message">Log in to access your notes</h2>
+        <form class="form form--search form--login" action="" id="login">
+          <textarea class="form__input" id="userName" rows="1" placeholder="Username"></textarea>
+          <!-- <input class="form__input" id="userName" type="text" name="userName" placeholder="Username"> -->
+          <input class="form__button" id="loginButton" type="button" value="Log in">
+        </form>
+      </div>
+    </div>
+    <div class="forms hidden" id="forms">
+      <div class="forms__content">
+        <!-- Form Search note -->
+        <form class="form form--search" action="/search" method="GET">
+          <input class="form__input" id="searchNote" type="text" name="q" placeholder="Search...">
+          <input class="form__button" id="searchButton" type="submit" value="Search">
+        </form>
+       
+        <form class="form form--create" action="/addnote" method="POST"> 
+          <!-- Form Create note -->
+          {$$ SUBMITED $$}
+          <!-- <p class="form__saved"> Your note has been saved</p> -->
+          <textarea class="form__text" id="createNote" name="new_note" cols="30" rows="10"
+            placeholder="Add your note's text here..."></textarea>
+          <input class="form__button" id="createButton" type="submit" value="Create note">
+        </form>
+        <!-- See all notes -->
+        <div class="form notes__link">
+          <a href="/all_notes">See all my notes</a>
+        </div>
       </div>
     </div>
 

@@ -26,4 +26,10 @@ Now I think some color would be great for this page.
 ---05/September/19***And now I'm trying the line height I just added.
 Maybe it will look better
 ---05/September/19***My husband is really tired. He doesn't want me to show him my new app.
+---06/September/19***This is my new note right after the big JS changes!
+---06/September/19***Another note to test my JS
+---06/September/19***This is my last note, my Js is not yet working as I would like it to work.
+---06/September/19***Let's try again, this time should work!!
+---06/September/19***Another note, I hope this will work because I'm tired!
+---06/September/19***It worked!!! I'm so F... happy!!!!!
 ---

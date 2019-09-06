@@ -3,34 +3,33 @@
 import flask
 import datetime
 
-app = flask.Flask("notes_app")
+app = flask.Flask("notesapp")
 
 # === FUNCTIONS ===
 
-# = Create note =
+
 def create_note(note):
+    # Open note
     notes = open("notesapp.txt", "a")
     # Get date
-    date = date = datetime.datetime.now().strftime("%d/%B/%y")
+    date = datetime.datetime.now().strftime("%d/%B/%y")
+    # write date + separator
     notes.write(date + "***")
+    # write note + newline
     notes.write(note + "\n")
+    # write separator
     notes.write("---")
+    # close note
     notes.close()
 
-# = Search & get notes =
-def search_note(text):
-    document = open("notesapp.txt")
-    content = document.read()
-    document.close()
-    notes = content.split("\n---")
-    notes.pop(len(notes) - 1)
-
+# Function to use inside the search_note function below
+def parse_note(notes_array, text):
     # variables to get the text
     full_text = ""
     notes_count = 0
 
     # loop the notes content
-    for note in notes:
+    for note in notes_array:
         if note.lower().find(text) != -1:
             notes_count += 1
             # Make list with single note to separate date and text
@@ -41,22 +40,46 @@ def search_note(text):
             if note_array[0] == today:
                 note_date = "<p class=\"note__date\">Created: <span>Today<span></p>"
             else:
-                note_date = "<p class=\"note__date\">Created: <span>" + note_array[0] + "<span></p>"
-            
+                note_date = "<p class=\"note__date\">Created: <span>" + \
+                    note_array[0] + "<span></p>"
+
             # get text
-            note_text = note_array[1].replace("\n", "<br>")#Keeping newlines in notes
+            note_text = note_array[1].replace(
+                "\n", "<br>")  # Keeping newlines in notes
             note_text = "<p class=\"note__text\">" + note_text + "</p>"
-            
-             # create note div with latest note created appearing first in the list
+
+            # create note div with latest note created appearing first in the list
             full_text = "<div class=\"note\">" + note_date + note_text + "</div>" + full_text
-        
-    if full_text == "":
-        full_text = "<h3>Notes Found: " + str(notes_count) + \
-            "</h3> <div class=\"note\"> <p class=\"note__text\">Sorry! there are no results that match your search.</p> </div>"
+    
+    # Produces the final text to add to the page with the results
+    if full_text != "":
+        full_text = "<h3>Notes found: " + \
+            str(notes_count) + "</h3 >" + full_text
+
+    # If there are no results
     else:
-        full_text = "<h3>Notes Found: " + str(notes_count) + "</h3 >" + full_text
+        full_text = "<h3>Notes found: " + str(notes_count) + \
+            "</h3> <div class=\"note\"> <p class=\"note__text\">Sorry! there are no results that match your search.</p> </div>"
 
     return full_text
+
+
+def search_note(text):
+    # open file
+    document = open("notesapp.txt")
+    # get content
+    content = document.read()
+    # close file
+    document.close()
+    # split content using separator
+    notes = content.split("\n---")
+    # erase the last element that is always empty
+    notes.pop(len(notes) - 1)
+
+    # get note with the function created above
+    note = parse_note(notes, text)
+    return note
+
 
 # = Get HTML page =
 def get_html(page_name):
@@ -73,7 +96,7 @@ def homepage():
     return get_html("index").replace("{$$ SUBMITED $$}", "")
 
 # = Create note =
-@app.route("/submit", methods=['GET', 'POST'])
+@app.route("/addnote", methods=['GET', 'POST'])
 def addnote():
     note_text = flask.request.form['new_note']
     html_page = get_html("index")
@@ -86,7 +109,7 @@ def addnote():
 
 # = Search for notes =
 @app.route("/search")
-def searchnote():
+def search():
     search_text = flask.request.args.get("q").strip().lower()
     html_page = get_html("search")
     notes_text = search_note(search_text)
@@ -94,8 +117,8 @@ def searchnote():
     
     
 # = Show full list =
-@app.route("/notes")
-def shownotes():
+@app.route("/all_notes")
+def all_notes():
     html_page = get_html("search")
     notes_text = search_note("")
     return html_page.replace("{$$ NOTES $$}", notes_text)
