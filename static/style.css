@@ -56,6 +56,7 @@ html {
 
 body {
   display: flex;
+  color: #263238;
   flex-direction: column;
   min-height: 100vh;
 }
@@ -84,7 +85,7 @@ body {
 
 .header__title img {
   padding: 0 3%;
-  width: 0.7em;
+  width: 0.65em;
 }
 
 .header__welcome {
@@ -194,7 +195,7 @@ body {
 .form__button:hover,
 .form__button:active {
   background-color: #f0f0f0;
-  color: #00c8ac;
+  color: #009f8a;
 }
 
 .notes__link a {
@@ -206,6 +207,7 @@ body {
   padding: 3%;
   text-align: center;
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .notes__link a:hover,

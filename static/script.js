@@ -57,7 +57,7 @@ function setName() {
   }
 }
 
-// This function uses all the previous functions to preform the login of the app
+// This function uses all the previous 3 functions to perform the login of the app
 // To be activated below with an EventListener
 function logIn() {
   // Only works if there is text in the input element!
@@ -66,6 +66,7 @@ function logIn() {
     changeHidden();
   }
 }
+
 
 // This function is to be called when opening the page so the user doesn't need to log again
 function rememberUser() {
@@ -77,7 +78,7 @@ function rememberUser() {
 
 }
 
-// This function erases the welcome message after saving a note
+// This function erases the welcome message once we are in the addnote page. to be called right when the page is opened
 function eraseMessage() {
   if (window.location.pathname == "/addnote") {
     welcomeMessage.classList.add("hidden");
@@ -99,12 +100,3 @@ userName.addEventListener("keyup", () => {
     document.getElementById("loginButton").click();
   }
 });
-
-console.log(window.location.pathname);
-
-// // To remove welcome message when a new note is created
-// createButton.addEventListener("click", () => {
-  
-// });
-
-
