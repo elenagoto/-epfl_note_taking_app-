@@ -1,6 +1,6 @@
 # Exercise: The  Web Taking Note App
 
-This is last exercise of the *EPFL Extension School* ***Thinking and Creating with Code*** course.
+This is last exercise of the *EPFL Extension School* **Thinking and Creating with Code** course. This project has been deployed using [PythonAnywhere](https://www.pythonanywhere.com), and can be teste following [***This link***](http://elenagoto.pythonanywhere.com/).
 
 ## Instructions:
 
@@ -21,4 +21,4 @@ Here are the minimum features that the app should contain:
 
 ## Author
 
-This project was developped by **[Laura Gómez](https://elenagoto.ch)**. Any comments (ideas, changes to make, moral support) can be sent to laura@elenagoto.ch.
+This project was developped by [**Laura Gómez**](https://elenagoto.ch). Any comments (ideas, changes to make, moral support) can be sent to laura@elenagoto.ch.
