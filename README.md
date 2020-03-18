@@ -1,6 +1,8 @@
-# Exercise: The  Web Note App
+# Exercise: The  Web Taking Note App
 
-Instructions:
+This is last exercise of the *EPFL Extension School* ***Thinking and Creating with Code*** course.
+
+## Instructions:
 
 Here are the minimum features that the app should contain:
 
@@ -16,3 +18,7 @@ Here are the minimum features that the app should contain:
 - The app should be built using the Flask web framework.
 - Each major step taken in building the app is properly committed to Git with a descriptive commit message.
 - The source code for the whole app is pushed to GitHub!
+
+## Author
+
+This project was developped by **[Laura Gómez](https://elenagoto.ch)**. Any comments (ideas, changes to make, moral support) can be sent to laura@elenagoto.ch.
